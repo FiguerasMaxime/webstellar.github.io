@@ -1,0 +1,371 @@
+body {
+	width: 100%;
+    height: 100vh;
+	margin: 0;
+	overflow: hidden;
+    font-family: 'Twcen';
+    background: url(../img/Universe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+	background-position: center center;
+	cursor: crosshair;
+}
+
+canvas {
+	display: block;
+	z-index: 1;
+}
+
+@font-face {
+font-family: 'Twcen';
+src : url('../Tw Cen MT.woff');
+}
+
+#planet1_A1 {
+    position: absolute;
+    left: 0;
+    top: 2000px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    border: none;
+}
+		
+nav {
+	position: absolute;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	z-index: 3;
+}
+
+.devlab {
+	margin-left: 100px;
+	width: 43px; 
+	height: 43px;
+}
+
+#planet1 {
+	position: absolute;
+	text-align: center;
+	width: 300px;
+	top: 72vh;
+	left: 8%;
+    display: none;
+	color: #fff;
+	font-size: 40px;
+}
+
+#planet1 h2 {
+    color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#planet1 p {
+	color: #fff;
+	opacity: .7;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+
+#goToPlanet1 {
+    position: absolute;
+    width: 300px;
+    top: 410px;
+    right: 7%;
+    text-align: center;
+    display: none;
+}
+
+#goToPlanet1 a {
+    color: #A41687;
+    text-decoration: none; 
+    padding: 10px 5px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 3px solid #A41687;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#goToPlanet1 a:hover {
+    color: #fff;
+    background-color: #A41687;
+}
+
+#planet2 {
+	position: absolute;
+	text-align: center;
+	width: 300px;
+	top: 72vh;
+	left: 8%;
+	display: none;
+	color: #fff;
+	font-size: 40px;
+}
+
+#planet2 h2 {
+    color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#planet2 p {
+	color: #fff;
+	opacity: .7;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+
+#goToPlanet2 {
+    position: absolute;
+    width: 300px;
+    top: 410px;
+    right: 7%;
+    text-align: center;
+    display: none;
+}
+
+#goToPlanet2 a {
+    color: #A41687;
+    text-decoration: none; 
+    padding: 10px 5px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 3px solid #A41687;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#goToPlanet2 a:hover {
+    color: #fff;
+    background-color: #A41687;
+}
+
+#planet3 {
+	position: absolute;
+	text-align: center;
+	width: 300px;
+	top: 72vh;
+	left: 8%;
+	display: none;
+	color: #fff;
+	font-size: 40px;
+}
+
+
+#goToPlanet3 {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    top: 410px;
+    right: 7%;
+    text-align: center;
+    display: none;
+}
+
+#goToPlanet3 a {
+    color: #A41687;
+    text-decoration: none; 
+    padding: 10px 5px;
+    border-radius: 25px;
+    background-color: #fff;
+    border: 3px solid #A41687;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#goToPlanet3 a:hover {
+    color: #fff;
+    background-color: #A41687;
+}
+
+#planet3 h2 {
+    color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#planet3 p {
+	color: #fff;
+	opacity: .7;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+#morph {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 13;
+}
+
+.polymorph {
+    fill: #A41687;
+}
+
+.navigation {
+    position: absolute;
+    top: 80vh;
+    left: 0;
+    width: 20%;
+    height: 20vh;
+}
+
+.svgNav {
+    width: 250px;
+    height: 250px;
+    fill: #fff;
+}
+
+.svgNav path {
+	fill: #fff;
+	opacity: 1;
+}
+.svgNav circle {
+    opacity: 0.5;
+}
+
+.svgNav #svgClicked {
+	opacity: 0.5;
+	fill: #fff;
+}
+.svgNav #svgClicked:hover {
+    opacity: 1;
+}
+
+.planeSVG {
+    position: absolute;
+    z-index: 15;
+    top: 102%;
+    left: 48.5%;
+    width: 50px;
+    height: 50px;
+}
+
+.flex {
+	width: 350px;
+	right: 7%;
+	top: 10%;
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	z-index: 1;
+	text-align: right;
+}
+
+#titlePage h2 {
+    color: #fff;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+#titlePage p {
+	color: #fff;
+	opacity: .7;
+	font-size: 20px;
+	font-weight: normal;
+}
+
+@media screen and (max-width: 1024px ) {
+    #planet1 {
+        right: 75px;
+    }
+    #planet2 {
+        right: 75px;
+    }
+    #planet3 {
+        right: 75px;
+    }
+    #titlePage {
+        margin-top: 25px;
+    }
+    nav {
+        height: 175px;
+    }
+    .devlab {
+        margin-left: 75px;
+	}
+}
+
+@media screen and (max-width: 414px) {
+	.devlab {
+		 margin-left: 35px; 
+		 width: 30px;
+		 height: 30px;
+	} 
+	nav {
+		height: 100px;
+	}
+	#titlePage {
+		 margin-top: 0;
+		 height: 150px;
+	}
+	#titlePage h2 {
+		 font-size: 25px;
+	}
+	#titlePage p {
+		font-size: 15px;
+   }
+	#planet1 h2, #planet2 h2, #planet3 h2 {
+		font-size: 25px;
+		margin: 10px 0;
+	}
+	#planet1 p, #planet2 p, #planet3 p {
+		margin-top: 0;
+   }
+	#planet1, #planet2, #planet3 {
+		 width: 100%;
+		 justify-content: center;
+		 flex-direction: column;
+		 text-align: center;
+		 left: 0;
+
+	}
+
+	#goToPlanet1 {
+		width: 100%;
+		text-align: center;
+		right: 0;
+		top: 220px;
+	}
+	#goToPlanet1 a {
+		font-size: 15px;
+	}
+	.navigation {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+	}
+	.svgNav {
+		width: 180px;
+		height: 180px; 
+	}
+	.navigation{
+        top: 82vh;
+	}
+	.flex{
+		width: 100%;
+		left: 0;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width:375px) {
+	#goToPlanet1 {
+		top: 250px;
+	}
+}

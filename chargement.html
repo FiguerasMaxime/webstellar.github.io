@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title></title>
+    <link rel="stylesheet" href="css/chargement.css">
+</head>
+
+<body>
+    <div class="bg">
+        <div class="planeSVG">
+                <img src="SVG/Fichier 3.svg" alt="planeSVG" class="plane">
+            </div>
+        
+            <svg id="morph" height="100%" width="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+                <polygon class="polymorph" points="0,1080 960,1080 1920,1080 1920,1080 0,1080 " />
+            </svg>
+    </div>
+    <script src="js/anime.min.js"></script>
+    <script>
+    var morphing = anime({ // ANIMATION DU SVG 
+        targets: '.polymorph',
+        points: [
+            { value: '0,1067.3 960,600.9 1920,1067.3 1920,1080 0,1080 '},
+            { value: '0,0.6 960,0 1920,0 1920,1080 0,1080 '},
+        ],
+        easing: 'easeInOutExpo',
+        duration: 1700,
+        
+        })
+
+        anime({ //ANIMATION DE L'AVION
+        targets: '.plane',
+        rotate: {
+            value: -90,
+            duration: 200,
+        },
+        translateX: {
+            value: 1500,
+            duration: 2000,
+        },
+        delay: 200,
+        loop: false,
+        easing: 'easeInOutExpo',
+
+        })
+
+    </script>
+</body>
+
+</html>

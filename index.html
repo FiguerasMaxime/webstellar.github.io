@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Home Landing Page</title>
+</head>
+<!-- http://deptinfo.unice.fr/~renevier/webL3Miage/exercices/javascript/Threejs.pdf -->
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+    <!-------------------------- SECTION ----------------------------->
+    <section class="content" id="menu">
+        <header>
+            <nav>
+                <a href="#">
+                    <img src="img/DevLab.png" alt="devlab" class="devlab">
+                </a>
+                <a href="#">
+                    <img src="img/LogoPlanet.png" alt="logoplanet" class="logoplanet">
+                </a>
+            </nav>
+        </header> <!-- HEADER-->
+
+        <div class="maincontent">
+            <!-- CONTENT -->
+            <div class="translate">
+                <div class="rotateBefore">
+                    <div class="perspectiveBefore">
+                        <div class="center2">
+                            <p>DEV | WEB</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="rotateBig">
+                    <div class="perspectiveBig">
+                        <div class="center">
+                            <img src="SVG/Fichier 1.svg" alt="projectsvg" class="imageProjects" />
+                        </div>
+                    </div>
+                </div>
+                <div class="rotateAfter">
+                    <div class="perspectiveAfter">
+                        <div class="center3">
+                            <p>IIM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="button">
+                <div class="btn">
+                    <div class="circle">
+                        <a href="univers.html" id="wrapper">
+                            <!-- ENLEVE L'AJOUT SUR L'URL-->
+                            <img src="SVG/Fichier 3.svg" alt="spaceshipsvg" height="25px" width="25px" id="spaceship" />
+                        </a>
+                    </div>
+                    <p>TRAVEL</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- INTERFACE -->
+
+        <div class="loc location">
+            <!-- BEHIND -->
+            <img src="SVG/Fichier 5.svg" alt="location" class="svgLocation">
+        </div>
+        <div class="loc location1">
+            <img src="SVG/Fichier 7.svg" alt="location" class="svgLocation">
+        </div>
+        <div class="loc location2">
+            <img src="SVG/Fichier 6.svg" alt="location" class="svgLocation">
+        </div>
+        <div class="loc location3">
+            <img src="SVG/Fichier 8.svg" alt="location" class="svgLocation">
+        </div>
+
+        <div class="lineT">
+            <!-- ANIMATION TOP LEFT-->
+            <svg class="svgTop" viewBox="0 0 310 310" preserveAspectRatio="none">
+                <line x1="0" y1="300" x2="300" y2="0" stroke-width="1" stroke="white" stroke-linecap="square" />
+                <circle cx="0" cy="300" r="3" stroke="white" fill="white" class="boule3" />
+            </svg>
+            <div class="square el">
+                <img src="SVG/Fichier 3.svg" alt="line" width="40px" height="40px">
+            </div>
+        </div>
+
+        <div class="motifB">
+            <!-- ANIMATION BOTTOM RIGHT-->
+            <svg width="100%" height="auto" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg">
+                <polyline fill="none" stroke="white" stroke-width="2" points="1000,150 150,150 6,40 6,-50"
+                    opacity="0.3" />
+                <circle cx="700" cy="150" r="40" stroke="white" fill="transparent" stroke-width="2" opacity="0.3" />
+                <circle cx="700" cy="150" r="20" stroke="white" fill="transparent" stroke-width="2" opacity="0.3" />
+                <circle cx="700" cy="150" r="5" stroke="white" fill="transparent" stroke-width="2" opacity="0.3" />
+
+                <circle cx="250" cy="150" r="25" stroke="white" fill="transparent" stroke-width="2" opacity="0.3" />
+                <circle cx="250" cy="150" r="10" stroke="white" fill="white" stroke-width="2" opacity="0.3" />
+
+                <circle cx="57" cy="80" r="14" stroke="white" fill="white" stroke-width="2" opacity="0.3" />
+                <circle cx="82" cy="98" r="8" stroke="white" fill="white" stroke-width="2" opacity="0.3" />
+                <circle cx="99" cy="111" r="4" stroke="white" fill="white" stroke-width="2" opacity="0.3" />
+
+                <circle cx="1000" cy="150" r="4" stroke="white" fill="white" class="boule" />
+            </svg>
+        </div>
+
+        <div class="lineB">
+            <!-- ANIMATION BOTTOM RIGHT-->
+            <svg width="100%" height="auto" wiexBox="0 0 300 500" xmlns="http://www.w3.org/2000/svg">
+                <line x1="20" y1="500" x2="800" y2="-200" stroke="white" stroke-width="2px" opacity="0.3" />
+                <circle cx="20" cy="500" r="2" stroke="white" fill="white" class="boule2" />
+            </svg>
+        </div>
+    </section> <!-- FIN DE LA SECTION 1-->
+
+    <div class="planeSVG">
+        <img src="SVG/Fichier 3.svg" alt="planeSVG" class="plane">
+    </div>
+
+    <!-- SVG TRANSITION POUR FAIRE PASSER A LA SECTION 2-->
+    <svg id="morph" height="100%" width="100%" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+        <polygon class="polymorph" points="0,1080 960,1080 1920,1080 1920,1080 0,1080 " />
+    </svg>
+
+    <script src="js/anime.min.js"></script>
+    <!--ANIME JS-->
+    <script src="js/section1-svgTransition.js"></script>
+</body>
+
+</html>

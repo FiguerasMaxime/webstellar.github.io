@@ -1,0 +1,621 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'Twcen';
+    src : url('../Tw Cen MT.woff');
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background: url(../img/Universe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    cursor: crosshair;
+}
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+#univers, iframe {
+    position: absolute;
+    left: 0;
+    top: 2000px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: none;
+    border: none;
+}
+
+
+.content {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0,0,0,0.3)),url(../img/Black_Tunnel.jpg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.loader {
+
+    position : fixed;
+    z-index: 9999;
+    background : url(img/Logoplanet.png) 50% 50% no-repeat;
+    top : 0px;
+    left : 0px;
+    height : 100%;
+    width : 100%;
+    cursor : wait;
+    }
+
+nav {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+}
+
+.devlab {
+    margin-left: 100px;
+    width: 43px; 
+    height: 43px;
+}
+
+.logoplanet{
+    margin-right: 100px;
+    width: 43px;
+    height: 43px;
+}
+.maincontent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.translate {
+    margin-top: 25vh;
+    width: 900px;
+    height: 420px; 
+    display: flex;
+    z-index: 3;
+}
+
+.rotateBefore {
+    position: fixed;
+    margin-left: 178.5px;
+    margin-top: 37px;
+    width: 150px;
+    height: 125px;
+    /*background-color: #000; */ 
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+
+.perspectiveBefore {
+    width: 180%;
+    height: 65px;
+    background-color: #A41687;
+    -ms-transform: skewY(-15deg);
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.rotateBig {
+    position: fixed;
+    margin-top: 80px;
+    margin-left: 153px;
+    width: 300px;
+    height: 250px;
+    /*background-color: #000; */ 
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+
+.perspectiveBig {
+    width: 550px;
+    height: 200px;
+    border: solid 2px white;
+    background-color: rgba(0,0,0,0.3);
+    -ms-transform: skewY(-15deg);
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center {
+    font-family: 'spacetime';
+    font-size: 50px;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    color: #fff;
+}
+
+
+.center2 {
+    font-family: 'Twcen';
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.center3 {
+    font-family: 'Twcen';
+    letter-spacing: 3px;
+    text-align: center;
+    color: #A41687;
+}
+
+.center2 p, .center3 p {
+    font-weight: 600;
+    font-size: 25px;
+    transform: rotate(-15deg) skewY(15deg);
+    -ms-transform: rotate(-15deg) skewY(15deg);
+    -webkit-transform: rotate(-15deg) skewY(15deg);
+}
+
+.rotateAfter {
+    position: fixed;
+    margin-left: 523px;
+    margin-top: 311.5px;
+    width: 150px;
+    height: 125px;
+    /*background-color: #000; */ 
+    transform: rotate(15deg);
+    -ms-transform: rotate(15deg);
+    -webkit-transform: rotate(15deg);
+}
+
+.perspectiveAfter {
+    width: 150px;
+    height: 65px;
+    background-color: #fff;
+    color: #A41687;
+    -ms-transform: skewY(-15deg);
+    -webkit-transform: skewY(-15deg);
+    transform: skewY(-15deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    z-index: 2;
+    position: absolute;
+    top: 75vh;
+
+}
+
+.btn{
+    display: flex;
+    width: 120px;
+    height: 50px;
+    background: #fff;
+    border: 2px solid #A41687;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+
+}
+
+#wrapper {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn p {
+    color: #A41687;
+    font-family: 'Twcen';
+    font-weight: bold;
+    letter-spacing: 1px;
+    pointer-events: none;
+    margin: auto auto;
+}
+
+.btn:hover {
+    border: 2px solid #fff;
+    background: #A41687;
+}
+
+.circle {
+    margin-top: 5px;
+    margin-left: 5px;
+    width: 40px;
+    height: 40px;
+    background: #A41687;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.btn:hover .circle {
+    margin-left: 35%;
+    transform: rotate(-90deg);
+}
+
+.btn:hover p {
+    display: none;
+}
+
+#spaceship {
+    position: absolute;
+    pointer-events: none;
+}
+
+.traitBottom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #A41687;
+}
+
+.loc {
+    position: absolute;
+    z-index: 1;
+}
+
+.location{
+    top: 30%;
+    left: 10%;
+}
+
+.location1{
+    top: 70%;
+    left: 80%;
+}
+
+.location2{
+    top: 70%;
+    left: 30%;
+}
+
+.location3{
+    top: 15%;
+    left: 70%;
+}
+
+.svgLocation {
+    width: 70px;
+    height: 70px;
+}
+
+
+.trait{
+    position: absolute;
+    height: 6vh;
+    width: 2px;
+    background: #fff;
+    left: 50%;
+    top: 0;
+}
+
+.lineT {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 25%;
+    height: 20vh;
+}
+
+.svgTop {
+    width: 300px;
+    height: 300px;
+}
+
+.square { /*carré qui suit .line */
+    position: absolute;
+    top: 300px; /* décalage pour mettre le carré sur la ligne*/ 
+    left: -29px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+}
+.motifB {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 50%;
+    height: 25vh;
+}
+
+.lineB {
+    position: absolute;
+    right: 0;
+    bottom:0;
+    width: 30%;
+    height: 50vh;
+
+}
+
+.imageProjects {
+    width: 400px;
+    height: 400px;
+}
+
+@media screen and (max-width: 1024px) and (min-height: 1150px) {
+    .translate {
+        margin-top: 40vh;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .button {
+        top : 80vh;
+    }
+    .motifB {
+        bottom: -30px;
+    }
+}
+
+
+@media screen and (max-height: 800px) {
+    .motifB {
+        bottom: -50px;
+    }
+    .button {
+        top: 82vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .translate {
+        margin-left: 25%;
+        margin-top: 30vh;
+    }
+    
+    .rotateBefore {
+        margin-top: 35px;
+    }
+    
+    .perspectiveBefore {
+        width: 100%;
+    }
+
+    .perspectiveBefore p {
+        font-size: 18px;
+    }
+
+    .perspectiveAfter p {
+        font-size: 18px;
+    }
+
+    .rotateAfter {
+        margin-top: 243.5px;
+        margin-left: 386.5px;
+    }
+
+    .perspectiveBig {
+        width: 400px;
+        height: 150px;
+    }
+
+    .imageProjects {
+        width: 280px;
+        height: 280px;
+    }
+
+    .button {
+        top: 84vh;
+    }
+
+    .motifB {
+        bottom: -60px;
+    }
+}
+
+
+@media screen and (max-width: 414px) {
+    .translate {
+        margin-left: 60%;
+        margin-top: 35vh;
+    }
+
+    .rotateBefore {
+        margin-top: 50px;
+        margin-left: 176px;
+    }
+    
+    .perspectiveBefore {
+        width: 75%;
+        height: 40px;
+    }
+
+    .perspectiveBefore p {
+        font-size: 12px;
+    }
+
+    .rotateAfter {
+        margin-top: 192px;
+        margin-left: 378.5px;
+    }
+
+    .perspectiveAfter {
+        width: 70px;
+        height: 35px;
+    }
+
+    .perspectiveAfter p {
+        font-size: 12px;
+    }
+
+    .perspectiveBig {
+        width: 300px;
+        height: 100px;
+    }
+
+    .imageProjects {
+        width: 220px;
+        height: 220px;
+    }
+
+    .button {
+        top: 84vh;
+    }
+
+    .btn {
+        width: 80px;
+        height: 40px
+    }
+
+    .btn p {
+        font-size: 10px;
+    }
+
+    .circle {
+        margin-top: 6px;
+        width: 25px;
+        height: 25px;
+    }
+
+    .motifB {
+        bottom: -40px;
+    }
+
+    #spaceship {
+        height: 17px;
+        width: 17px;
+    }
+
+    .svgLocation {
+        width: 45px;
+        height: 45px;
+    }
+
+    .devlab {
+        margin-left: 50px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .logoplanet {
+        margin-right: 50px;
+        width: 30px;
+        height: 30px;
+    }
+
+    .svgTop {
+        width: 150px;
+        height: 150px;
+    }
+
+    .el{
+        display: none;
+    }
+
+    .planeSVG {
+        left: 45% !important;
+    }
+
+    .plane{
+        width: 35px;
+        height: 35px;
+    }
+    
+}
+
+@media screen and (max-width: 375px) {
+    .rotateBefore {
+        margin-top: 50px;
+        margin-left: 214px;
+    }
+    
+    .rotateAfter {
+        margin-top: 192.5px;
+        margin-left: 366px;
+    }
+
+    .rotateBig {
+        margin-top: 87px;
+        margin-left: 190px;
+    }
+    .perspectiveBig {
+        width: 250px;
+    }
+
+    nav {
+        height: 75px;
+    }
+
+    .devlab {
+        margin-left: 30px;
+    }
+
+    .logoplanet {
+        margin-right: 30px;
+    }
+}
+
+
+.svgDiv {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+#morph {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    pointer-events: none;
+    z-index: 13;
+}
+
+.polymorph {
+    fill: #A41687;
+}
+
+
+.planeSVG {
+    position: absolute;
+    z-index: 15;
+    top: 102%;
+    left: 48.5%;
+    width: 50px;
+    height: 50px;
+}
+
+
+
